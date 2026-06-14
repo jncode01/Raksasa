@@ -234,17 +234,21 @@ section{ position:relative; }
    FLOATING BUY
    ========================================================= */
 .float-buy{
-  position:fixed; right:clamp(16px,3vw,34px); bottom:clamp(16px,3vw,34px); z-index:115;
-  display:inline-flex; align-items:center; gap:.8em;
+  position:fixed; right:clamp(14px,3vw,34px); bottom:clamp(14px,3vw,34px); z-index:115;
+  display:inline-flex; align-items:center; gap:.7em;
   background:var(--ink); color:var(--ivory);
-  font-family:var(--sans); font-weight:600; font-size:.74rem;
-  letter-spacing:.2em; text-transform:uppercase;
-  padding:1.05em 1.5em;
+  font-family:var(--sans); font-weight:600; font-size:.7rem;
+  letter-spacing:.18em; text-transform:uppercase;
+  padding:.9em 1.3em;
   border-radius:0;
   box-shadow:0 14px 40px -14px oklch(0.2 0.02 60 / .6);
   transform:translateY(140%);
   transition:transform .7s var(--ease), background .4s, color .4s;
   overflow:hidden;
+}
+@media (max-width:640px){
+  .float-buy{ font-size:.64rem; padding:.8em 1.1em; gap:.5em; letter-spacing:.12em; }
+  .float-buy .dot{ width:6px; height:6px; }
 }
 .float-buy.show{ transform:translateY(0); }
 .float-buy:hover{ background:var(--gold-deep); color:var(--noir); }
@@ -287,7 +291,7 @@ section{ position:relative; }
     radial-gradient(120% 90% at 50% 8%, transparent 30%, oklch(0.165 0.012 62 / .5) 78%),
     linear-gradient(180deg, oklch(0.165 0.012 62 / .55) 0%, oklch(0.165 0.012 62 / .15) 36%, oklch(0.165 0.012 62 / .8) 100%);
 }
-.hero-inner{ width:100%; padding-bottom:clamp(48px,9vh,120px); padding-top:140px; }
+.hero-inner{ width:100%; padding-bottom:clamp(48px,9vh,120px); padding-top:clamp(100px,18vh,160px); }
 .hero-eyebrow{ color:var(--gold); margin-bottom:30px; }
 .hero h1{
   font-family:var(--display); font-weight:300;
@@ -299,9 +303,13 @@ section{ position:relative; }
 .hero-foot{
   margin-top:clamp(34px,6vh,60px);
   display:flex; align-items:flex-end; justify-content:space-between;
-  gap:30px; flex-wrap:wrap;
+  gap:24px; flex-wrap:wrap;
 }
 .hero-desc{ max-width:42ch; color:oklch(0.97 0.01 85 / .82); font-size:1.02rem; }
+@media (max-width:640px){
+  .hero-desc{ font-size:.95rem; }
+  .hero-foot{ flex-direction:column; align-items:flex-start; gap:20px; }
+}
 
 /* masked line reveal */
 .line-mask{ display:block; overflow:hidden; }
@@ -360,7 +368,7 @@ section{ position:relative; }
 /* =========================================================
    STATEMENT / INTRO
    ========================================================= */
-.statement{ padding:clamp(90px,15vh,190px) 0; background:var(--ivory); }
+.statement{ padding:clamp(60px,12vh,190px) 0; background:var(--ivory); }
 .statement .wrap{ max-width:1100px; }
 .statement .eyebrow{ margin-bottom:40px; }
 .statement-lead{
@@ -384,7 +392,7 @@ section{ position:relative; }
 .myth{
   background:var(--noir);
   color:var(--ivory);
-  padding:clamp(90px,16vh,200px) 0;
+  padding:clamp(60px,12vh,200px) 0;
   position:relative; overflow:hidden;
 }
 .myth::before{
@@ -419,9 +427,10 @@ section{ position:relative; }
 /* =========================================================
    HERITAGE
    ========================================================= */
-.heritage{ background:var(--ivory-deep); padding:clamp(90px,15vh,190px) 0; }
-.heritage-band{ width:100%; aspect-ratio:3.08; margin-bottom:clamp(48px,8vh,90px); }
+.heritage{ background:var(--ivory-deep); padding:clamp(60px,12vh,190px) 0; }
+.heritage-band{ width:100%; aspect-ratio:3.08; margin-bottom:clamp(48px,8vh,90px); overflow:hidden; }
 .heritage-band img{ width:100%; height:100%; object-fit:cover; }
+@media (max-width:640px){ .heritage-band{ aspect-ratio:2/1; } }
 .heritage-grid{ display:grid; grid-template-columns:0.85fr 1.15fr; gap:clamp(34px,6vw,90px); align-items:start; }
 @media (max-width:860px){ .heritage-grid{ grid-template-columns:1fr; gap:34px; } }
 .heritage-grid h2{ color:var(--ink); }
@@ -435,8 +444,8 @@ section{ position:relative; }
 /* =========================================================
    PRODUCTS
    ========================================================= */
-.spirits{ background:var(--ivory); padding:clamp(90px,15vh,180px) 0 clamp(60px,9vh,110px); }
-.section-head{ text-align:center; max-width:720px; margin:0 auto clamp(60px,9vh,110px); }
+.spirits{ background:var(--ivory); padding:clamp(60px,12vh,180px) 0 clamp(40px,7vh,110px); }
+.section-head{ text-align:center; max-width:720px; margin:0 auto clamp(40px,7vh,110px); }
 .section-head h2{ margin-top:26px; }
 .section-head p{ margin-top:22px; font-size:1.06rem; }
 
@@ -449,18 +458,19 @@ section{ position:relative; }
 .product:last-of-type{ border-bottom:1px solid var(--hair); }
 .product.flip .p-media{ order:2; }
 @media (max-width:840px){
-  .product{ grid-template-columns:1fr; gap:30px; }
+  .product{ grid-template-columns:1fr; gap:24px; }
   .product.flip .p-media{ order:0; }
+  .p-media .frame{ aspect-ratio:4/5; max-height:65vw; }
 }
 .p-media{ position:relative; }
-.p-media .frame{ position:relative; overflow:hidden; background:var(--ivory-deep); aspect-ratio:.84; }
-.p-media .frame img{ width:100%; height:100%; object-fit:cover; transition:transform 1.3s var(--ease-out); }
+.p-media .frame{ position:relative; overflow:hidden; background:var(--ivory-deep); aspect-ratio:3/4; }
+.p-media .frame img{ width:100%; height:100%; object-fit:cover; object-position:center top; transition:transform 1.3s var(--ease-out); }
 .product:hover .p-media .frame img{ transform:scale(1.05); }
 .p-index{
-  position:absolute; top:-14px; left:-6px;
-  font-family:var(--display); font-size:clamp(3.4rem,7vw,6rem); line-height:1;
-  color:var(--gold); opacity:.9; z-index:2; pointer-events:none;
-  text-shadow:0 2px 30px oklch(0.97 0.01 85 / .8);
+  position:absolute; top:16px; left:16px;
+  font-family:var(--display); font-size:clamp(3rem,6vw,5.5rem); line-height:1;
+  color:var(--gold); opacity:0.92; z-index:2; pointer-events:none;
+  text-shadow:0 2px 24px oklch(0.165 0.012 62 / .55);
 }
 .p-info .kicker{ display:flex; gap:14px; align-items:center; margin-bottom:18px; flex-wrap:wrap; }
 .tag{
@@ -472,23 +482,27 @@ section{ position:relative; }
 .p-info .sub{ font-family:var(--display); font-style:italic; font-size:1.3rem; color:var(--gold-deep); margin-bottom:22px; }
 .p-info p{ font-size:1.01rem; max-width:52ch; }
 .serve{
-  margin:24px 0 28px; padding:18px 22px;
+  margin:20px 0 24px; padding:16px 18px;
   background:var(--paper-card); border-left:2px solid var(--gold);
 }
 .serve .lbl{ font-size:.62rem; letter-spacing:.26em; text-transform:uppercase; color:var(--gold-deep); font-weight:700; display:block; margin-bottom:7px; }
 .serve p{ margin:0; font-size:.95rem; color:var(--ink-soft); font-style:italic; font-family:var(--display); font-size:1.12rem; }
 .p-actions{ display:flex; gap:16px; align-items:center; flex-wrap:wrap; }
+@media (max-width:640px){
+  .p-actions{ flex-direction:column; align-items:stretch; }
+  .p-actions .btn{ justify-content:center; }
+}
 
 /* =========================================================
    COCKTAILS
    ========================================================= */
-.cocktails{ background:var(--noir); color:var(--ivory); padding:clamp(90px,15vh,190px) 0; overflow:hidden; }
+.cocktails{ background:var(--noir); color:var(--ivory); padding:clamp(60px,12vh,190px) 0; overflow:hidden; }
 .cocktails .section-head h2{ color:var(--ivory); }
 .cocktails .section-head p{ color:oklch(0.97 0.01 85 / .7); }
 .cocktails .section-head .eyebrow{ color:var(--gold); }
-.ct-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,2.4vw,34px); }
+.ct-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(14px,2vw,34px); }
 @media (max-width:1000px){ .ct-grid{ grid-template-columns:repeat(2,1fr); } }
-@media (max-width:620px){ .ct-grid{ grid-template-columns:1fr; } }
+@media (max-width:560px){ .ct-grid{ grid-template-columns:1fr; } }
 .ct{
   background:var(--noir-2); border:1px solid var(--noir-line);
   display:flex; flex-direction:column; cursor:pointer;
@@ -517,9 +531,9 @@ section{ position:relative; }
 /* =========================================================
    RITUALS / new ways to enjoy
    ========================================================= */
-.rituals{ background:var(--ivory); padding:clamp(90px,15vh,190px) 0; }
-.rituals-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:0 clamp(40px,6vw,100px); margin-top:clamp(40px,6vh,70px); }
-@media (max-width:760px){ .rituals-grid{ grid-template-columns:1fr; } }
+.rituals{ background:var(--ivory); padding:clamp(60px,12vh,190px) 0; }
+.rituals-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:0 clamp(30px,5vw,100px); margin-top:clamp(30px,5vh,70px); }
+@media (max-width:680px){ .rituals-grid{ grid-template-columns:1fr; } }
 .ritual{ display:grid; grid-template-columns:auto 1fr; gap:22px; padding:26px 0; border-top:1px solid var(--hair); align-items:baseline; }
 .ritual .rn{ font-family:var(--display); font-size:1.1rem; color:var(--gold-deep); letter-spacing:.1em; }
 .ritual h4{ font-family:var(--display); font-weight:500; font-size:1.5rem; margin:0 0 6px; }
