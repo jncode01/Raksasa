@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAKSASA — Crafted Spirits</title>
+<script>
+  /* Enable entrance animations only when JS runs and motion is allowed.
+     No-JS / print / reduced-motion => content shows at end-state. */
+  if(!window.matchMedia||!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    document.documentElement.classList.add('anim');
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="raksasa.css">
+</head>
+<body>
+
+<!-- ============ AGE GATE ============ -->
+<div id="agegate">
+  <div class="gate-inner">
+    <p class="gate-mark">RAKSASA</p>
+    <p class="gate-sub">Crafted Spirits · Malaysia</p>
+    <p class="gate-q">Are you of legal drinking age?</p>
+    <p class="gate-note">You must be 21 years or older to enter.</p>
+    <div class="gate-btns">
+      <button class="btn light" id="gate-yes">Yes, enter <span class="arr">&#8599;</span></button>
+      <button class="btn" id="gate-no" style="--bc:oklch(0.97 0.01 85 / .5); color:oklch(0.97 0.01 85 / .7)">I'm under 21</button>
+    </div>
+    <p class="gate-line">Please savour responsibly</p>
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <a href="#top" class="nav-logo">RAKSASA</a>
+  <div class="nav-links">
+    <a href="#legend">The Legend</a>
+    <a href="#heritage">Heritage</a>
+    <a href="#spirits">The Spirits</a>
+    <a href="#cocktails">Signature Serves</a>
+    <a href="#rituals">Rituals</a>
+    <a href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener" class="nav-buy">Buy Now</a>
+  </div>
+  <button class="menu-toggle">Menu <span>&#9776;</span></button>
+</nav>
+
+<!-- ============ MOBILE SHEET ============ -->
+<div class="sheet">
+  <div class="sheet-top">
+    <span class="nav-logo" style="color:var(--ivory)">RAKSASA</span>
+    <button class="sheet-close">Close &#10005;</button>
+  </div>
+  <nav class="sheet-nav">
+    <a href="#legend">The Legend</a>
+    <a href="#heritage">Heritage</a>
+    <a href="#spirits">The Spirits</a>
+    <a href="#cocktails">Signature Serves</a>
+    <a href="#rituals">Rituals</a>
+    <a href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener" style="color:var(--gold)">Buy Now &#8599;</a>
+  </nav>
+</div>
+
+<!-- ============ FLOATING BUY ============ -->
+<a class="float-buy" href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener">
+  <span class="dot"></span> Buy on Lazada <span class="arr">&#8599;</span>
+</a>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-bg" data-parallax="0.18">
+    <img src="https://raksasa.my/wp-content/uploads/2024/07/RAKSASA_ENG_JULY_02b-scaled.jpg" alt="Raksasa">
+  </div>
+  <div class="hero-inner wrap">
+    <div class="reveal-lines">
+      <p class="hero-eyebrow eyebrow" style="margin-bottom:34px">Crafted Spirits of Malaysia</p>
+      <h1>
+        <span class="line-mask"><span>Not every legend</span></span>
+        <span class="line-mask"><span>is a <em>myth.</em></span></span>
+        <span class="line-mask"><span>Some exist in <span class="gold">a bottle.</span></span></span>
+      </h1>
+    </div>
+    <div class="hero-foot reveal d3">
+      <p class="hero-desc">A rice-wine spirit distilled in a century-old house — where Southeast Asian myth meets modern craft, and every pour tells a story.</p>
+      <a class="btn light lg" href="#spirits">Meet the seven <span class="arr">&#8599;</span></a>
+    </div>
+  </div>
+  <div class="scrollcue"><span>Scroll</span><span class="bar"></span></div>
+</header>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement" id="legend">
+  <div class="wrap">
+    <p class="eyebrow reveal">The Spirit</p>
+    <p class="statement-lead reveal d1">In the enchanting land of Malaysia, where history and nature intertwine, <span class="gold">RAKSASA</span> emerges as a legendary spirit — a charismatic giant, the life of every party, and the storyteller that turns gatherings into unforgettable adventures.</p>
+    <div class="statement-cols">
+      <p class="reveal d1">Conceived by the imaginative minds at Cave &amp; Cellar, RAKSASA is crafted in a century-old distillery using traditional methods and locally sourced ingredients. At its heart is smooth rice wine, blended with vibrant botanicals to produce a carnival of flavours in every sip.</p>
+      <p class="reveal d2">This is not just a drink. It is bold, potent and steeped in tradition — a spirit that carries the soul of a place and the thrill of a celebration, bottled for those who know that the best stories are shared.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CINEMATIC BAND ============ -->
+<section class="band" style="height:62vh; min-height:420px; overflow:hidden; position:relative; background:var(--noir)">
+  <div class="img-wipe dark" style="position:absolute; inset:0">
+    <div data-parallax="0.12" style="position:absolute; inset:-12% 0; will-change:transform">
+      <img src="https://raksasa.my/wp-content/uploads/2024/07/RAKSASA_ENG_JULY_01-scaled.jpg" alt="" style="width:100%;height:124%;object-fit:cover;opacity:.8">
+    </div>
+  </div>
+  <div style="position:absolute; inset:0; background:linear-gradient(180deg, oklch(0.165 0.012 62/.4), oklch(0.165 0.012 62/.2))"></div>
+</section>
+
+<!-- ============ MYTHOLOGY ============ -->
+<section class="myth" id="myth">
+  <div class="wrap">
+    <div class="myth-head">
+      <p class="eyebrow center reveal">The Mythical Fusion</p>
+      <h2 class="display h-lg reveal d1">Where ancient myth meets <em style="font-style:italic">modern sophistication</em></h2>
+      <p class="reveal d2">Our identity draws on two powerful mythological creatures — the Raksasa and the Nian — merging their legendary essence into one bold spirit.</p>
+    </div>
+    <div class="myth-grid">
+      <div class="myth-fig img-wipe dark reveal">
+        <span class="ring"></span>
+        <img src="https://raksasa.my/wp-content/uploads/2024/07/RAKSASA_Nian.jpg" alt="The Nian">
+      </div>
+      <div class="myth-creatures">
+        <div class="creature reveal d1">
+          <span class="ko">The Majestic Beast</span>
+          <h3>RAKSASA</h3>
+          <p>In Southeast Asian mythology, the Raksasa is a formidable creature — revered and feared for its strength and mystical powers. Symbolising might, protection and resilience, it embodies the spirit of our drinks: bold, potent and steeped in tradition.</p>
+        </div>
+        <div class="creature reveal d2">
+          <span class="ko">The Symbol of Renewal</span>
+          <h3>Nian</h3>
+          <p>A creature of Chinese legend, the Nian emerges every Lunar New Year — warding off evil and heralding new beginnings. It represents renewal, the cyclical nature of life, and our commitment to blending ancient tradition with contemporary craft.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HERITAGE ============ -->
+<section class="heritage" id="heritage">
+  <div class="heritage-band img-wipe reveal">
+    <div data-parallax="0.08" style="width:100%;height:118%;margin-top:-9%">
+      <img src="https://raksasa.my/wp-content/uploads/2024/07/RAKSASA_ENG_JULY_03-01a-scaled.jpg" alt="Joo Lee Chan heritage">
+    </div>
+  </div>
+  <div class="wrap heritage-grid">
+    <div>
+      <p class="eyebrow reveal">Joo Lee Chan</p>
+      <h2 class="display h-md reveal d1">A heritage of tradition &amp; authenticity</h2>
+    </div>
+    <div>
+      <p class="lede reveal" style="font-size:1.1rem">The origins of RAKSASA trace back to the humble town of Mantin in the early 1900s. Arriving from China, Ong Eng Suan of the Tai Yuan Clan brought with him the secrets of his village — the ancient art of wine-making.</p>
+      <div class="timeline">
+        <div class="tl reveal d1"><span class="yr">1906</span><div class="tx"><h4>The first distillery, Mantin</h4><p>With a handful of skilled craftsmen, a modest distillery was established. Soon the local air was filled with the rich aroma of mijiu — rice wine.</p></div></div>
+        <div class="tl reveal d2"><span class="yr">1920s</span><div class="tx"><h4>A move to Seremban</h4><p>After the First World War, the thriving enterprise relocated. Through the ages, the distillation techniques and natural alchemy remained unchanged.</p></div></div>
+        <div class="tl reveal d3"><span class="yr">Today</span><div class="tx"><h4>An unbroken legacy</h4><p>Joo Lee Chan continues to honour its founder by crafting premium mijiu — steeped in centuries of tradition, exactly as Ong envisioned.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE SPIRITS ============ -->
+<section class="spirits" id="spirits">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow center reveal">The Collection</p>
+      <h2 class="display h-lg reveal d1">Seven spirits, one legend</h2>
+      <p class="reveal d2">Each begins with 100% rice wine from a century-old distillery, then takes its own path through Malaysia's most characterful botanicals.</p>
+    </div>
+
+    <!-- 1 ORIGINAL -->
+    <article class="product">
+      <div class="p-media reveal">
+        <span class="p-index">01</span>
+        <div class="frame img-wipe"><img src="https://raksasa.my/wp-content/uploads/2024/07/RAKSASA-Original-Gin.jpg" alt="Raksasa Original Gin"></div>
+      </div>
+      <div class="p-info reveal d1">
+        <div class="kicker"><span class="tag gold">Gin</span><span class="tag">40% ABV</span><span class="tag">50CL</span></div>
+        <h3>Original Gin</h3>
+        <p class="sub">East meets West</p>
+        <p>A 100% rice-wine marvel. The enchanting Asiatic character of rice wine, blended with the western essence of gin — a smoothness that disguises the powerful structure beneath.</p>
+        <div class="serve"><span class="lbl">How to serve</span><p>Straight and chilled — no tonic needed. Or 1:1 with tonic and a twist of orange peel.</p></div>
+        <div class="p-actions">
+          <a class="btn solid" href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener">Buy on Lazada <span class="arr">&#8599;</span></a>
+          <a class="btn gold" href="#cocktails">Signature serve</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2 NUTMEG -->
+    <article class="product flip">
+      <div class="p-media reveal">
+        <span class="p-index">02</span>
+        <div class="frame img-wipe"><img src="https://raksasa.my/wp-content/uploads/2024/07/RAKSASA-Nutmeg-Gin.jpg" alt="Raksasa Nutmeg Gin"></div>
+      </div>
+      <div class="p-info reveal d1">
+        <div class="kicker"><span class="tag gold">Gin</span><span class="tag">40% ABV</span><span class="tag">50CL</span></div>
+        <h3>Nutmeg Gin</h3>
+        <p class="sub">The Pearl of the Orient</p>
+        <p>The same sophisticated essence as our Original, with a hint of nutmeg sourced from Penang — indigenous to Southeast Asia. A nutty, woody sweetness and an extra kick for those who love more bite.</p>
+        <div class="serve"><span class="lbl">How to serve</span><p>Straight, or mixed into a simple yet exquisite gin &amp; tonic.</p></div>
+        <div class="p-actions">
+          <a class="btn solid" href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener">Buy on Lazada <span class="arr">&#8599;</span></a>
+          <a class="btn gold" href="#cocktails">Signature serve</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3 HIBISCUS -->
+    <article class="product">
+      <div class="p-media reveal">
+        <span class="p-index">03</span>
+        <div class="frame img-wipe"><img src="https://raksasa.my/wp-content/uploads/2024/07/Ralsasa-Hibiscus.jpg" alt="Raksasa Hibiscus Gin"></div>
+      </div>
+      <div class="p-info reveal d1">
+        <div class="kicker"><span class="tag gold">Gin</span><span class="tag">40% ABV</span><span class="tag">50CL</span></div>
+        <h3>Hibiscus Gin</h3>
+        <p class="sub">Malaysia's national flower</p>
+        <p>A vibrant, distinctive gin celebrating the hibiscus. A delicate floral profile with a captivating flowery nose, and a golden hue drawn entirely and naturally from the flower itself.</p>
+        <div class="serve"><span class="lbl">How to serve</span><p>An afternoon sip over ice — smooth and well-rounded.</p></div>
+        <div class="p-actions">
+          <a class="btn solid" href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener">Buy on Lazada <span class="arr">&#8599;</span></a>
+          <a class="btn gold" href="#cocktails">Signature serve</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4 SITRUS -->
+    <article class="product flip">
+      <div class="p-media reveal">
+        <span class="p-index">04</span>
+        <div class="frame img-wipe"><img src="https://raksasa.my/wp-content/uploads/2024/07/Ralsasa-Sitrus.jpg" alt="Raksasa Sitrus Gin"></div>
+      </div>
+      <div class="p-info reveal d1">
+        <div class="kicker"><span class="tag gold">Gin</span><span class="tag">40% ABV</span><span class="tag">50CL</span></div>
+        <h3>Sitrus Gin</h3>
+        <p class="sub">A celebration of calamansi</p>
+        <p>You say citrus, we say sitrus. Malaysia's own citrus gem — neither lime nor orange — delivers a perfectly balanced sweet-and-sour. A natural tinge of yellow, the fruit's oils, and a velvety structure.</p>
+        <div class="serve"><span class="lbl">How to serve</span><p>So vibrant it's a delight on its own — pure and unapologetically unique.</p></div>
+        <div class="p-actions">
+          <a class="btn solid" href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener">Buy on Lazada <span class="arr">&#8599;</span></a>
+          <a class="btn gold" href="#cocktails">Signature serve</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5 GULA MELAKA -->
+    <article class="product">
+      <div class="p-media reveal">
+        <span class="p-index">05</span>
+        <div class="frame img-wipe"><img src="https://raksasa.my/wp-content/uploads/2024/07/RAKSASA-Gula-Melaka.jpg" alt="Raksasa Gula Melaka Rum"></div>
+      </div>
+      <div class="p-info reveal d1">
+        <div class="kicker"><span class="tag gold">Rum</span><span class="tag">40% ABV</span><span class="tag">50CL</span></div>
+        <h3>Gula Melaka Rum</h3>
+        <p class="sub">Caramelised palm sugar</p>
+        <p>A bold spirit with a special twist — the harmonious marriage of rice wine and Gula Melaka. Deep, caramelised sweetness, tropical notes and warm, earthy undertones. Exotic indulgence in a glass.</p>
+        <div class="serve"><span class="lbl">How to serve</span><p>Neat, topped with ice — or a flavourful twist in cocktails.</p></div>
+        <div class="p-actions">
+          <a class="btn solid" href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener">Buy on Lazada <span class="arr">&#8599;</span></a>
+          <a class="btn gold" href="#cocktails">Signature serve</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6 MIJU -->
+    <article class="product flip">
+      <div class="p-media reveal">
+        <span class="p-index">06</span>
+        <div class="frame img-wipe"><img src="https://raksasa.my/wp-content/uploads/2024/07/Ralsasa-Miju.jpg" alt="Raksasa Miju"></div>
+      </div>
+      <div class="p-info reveal d1">
+        <div class="kicker"><span class="tag gold">Rice Wine</span><span class="tag">Mijiu</span><span class="tag">50CL</span></div>
+        <h3>Miju</h3>
+        <p class="sub">The mother spirit</p>
+        <p>A tribute to the heart of every Raksasa — the rice wine that is their foundation. Distilled in a century-old house, Miju celebrates the tradition, quality and craftsmanship behind our base, with exceptional smoothness and refined flavour.</p>
+        <div class="serve"><span class="lbl">How to serve</span><p>Honoured neat, so its timeless artistry can speak for itself.</p></div>
+        <div class="p-actions">
+          <a class="btn solid" href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener">Buy on Lazada <span class="arr">&#8599;</span></a>
+          <a class="btn gold" href="#cocktails">Signature serve</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7 GINGER -->
+    <article class="product">
+      <div class="p-media reveal">
+        <span class="p-index">07</span>
+        <div class="frame img-wipe"><img src="https://raksasa.my/wp-content/uploads/2024/07/Ralsasa-Ginger.jpg" alt="Raksasa Ginger Wine"></div>
+      </div>
+      <div class="p-info reveal d1">
+        <div class="kicker"><span class="tag gold">Wine</span><span class="tag">18% ABV</span><span class="tag">50CL</span></div>
+        <h3>Ginger Wine</h3>
+        <p class="sub">Organic Bentong ginger</p>
+        <p>Inspired by the rich history of ginger wine in Asia. Built on our signature rice wine and ginger from Bentong's celebrated organic farms — a bold spiciness and a warm, invigorating character.</p>
+        <div class="serve"><span class="lbl">How to serve</span><p>Over ice, or as a versatile base for creative cocktails.</p></div>
+        <div class="p-actions">
+          <a class="btn solid" href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener">Buy on Lazada <span class="arr">&#8599;</span></a>
+          <a class="btn gold" href="#cocktails">Signature serve</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ COCKTAILS ============ -->
+<section class="cocktails" id="cocktails">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow center reveal">Signature Serves</p>
+      <h2 class="display h-lg reveal d1">Recipes worth gathering for</h2>
+      <p class="reveal d2">Seven serves devised for the seven spirits. Tap any card to reveal the full recipe.</p>
+    </div>
+    <div class="ct-grid">
+
+      <article class="ct reveal">
+        <div class="ct-img"><span class="num">01</span><img src="https://raksasa.my/wp-content/uploads/2025/05/Raksasa-Original-Gin_Cocktail.jpg" alt=""></div>
+        <div class="ct-body">
+          <div class="base">Original Gin</div>
+          <h3>The Genmai</h3>
+          <p class="tease">Genmaicha-infused gin, lemon &amp; apple soda.</p>
+          <div class="recipe"><div class="recipe-inner">
+            <div class="row"><span>Genmaicha-infused Original Gin</span><span>30 ml</span></div>
+            <div class="row"><span>Lemon juice</span><span>1 wedge</span></div>
+            <div class="row"><span>Apple soda</span><span>90 ml</span></div>
+            <p class="method">Infuse gin with genmaicha tea (1:50) in a sealed jar for one day. Build over cubed ice — lemon, infused gin — then top with apple soda. Garnish with sliced lemon.</p>
+          </div></div>
+          <span class="ct-toggle">Recipe <span class="pm">+</span></span>
+        </div>
+      </article>
+
+      <article class="ct reveal d1">
+        <div class="ct-img"><span class="num">02</span><img src="https://raksasa.my/wp-content/uploads/2025/05/Raksasa-Nutmeg-Gin-Cocktail.jpg" alt=""></div>
+        <div class="ct-body">
+          <div class="base">Nutmeg Gin</div>
+          <h3>Spiced Beast</h3>
+          <p class="tease">Lime, spiced syrup &amp; a whisper of soda.</p>
+          <div class="recipe"><div class="recipe-inner">
+            <div class="row"><span>Nutmeg Gin</span><span>50 ml</span></div>
+            <div class="row"><span>Lime juice</span><span>15 ml</span></div>
+            <div class="row"><span>Spiced syrup</span><span>10 ml</span></div>
+            <div class="row"><span>Soda</span><span>30 ml</span></div>
+            <p class="method">Shake gin, lime and spiced syrup with ice. Strain into a chilled glass and top with soda. Garnish with sliced nutmeg.</p>
+          </div></div>
+          <span class="ct-toggle">Recipe <span class="pm">+</span></span>
+        </div>
+      </article>
+
+      <article class="ct reveal d2">
+        <div class="ct-img"><span class="num">03</span><img src="https://raksasa.my/wp-content/uploads/2025/05/Raksasa-Hibiscus-Gin-Cocktail.jpg" alt=""></div>
+        <div class="ct-body">
+          <div class="base">Hibiscus Gin</div>
+          <h3>Bloom &amp; Longan</h3>
+          <p class="tease">Chrysanthemum, longan, cucumber &amp; soda.</p>
+          <div class="recipe"><div class="recipe-inner">
+            <div class="row"><span>Infused Hibiscus Gin</span><span>30 ml</span></div>
+            <div class="row"><span>Soda</span><span>90 ml</span></div>
+            <div class="row"><span>Cucumber, long-sliced</span><span>1 pc</span></div>
+            <p class="method">Infuse 150 g gin with 2 g dried chrysanthemum and 10 g dried longan for one day. Line the glass with cucumber, fill with ice, build the infusion and top with soda. Stir before drinking.</p>
+          </div></div>
+          <span class="ct-toggle">Recipe <span class="pm">+</span></span>
+        </div>
+      </article>
+
+      <article class="ct reveal">
+        <div class="ct-img"><span class="num">04</span><img src="https://raksasa.my/wp-content/uploads/2025/05/Raksasa-Citrus-Gin-Cocktail.jpg" alt=""></div>
+        <div class="ct-body">
+          <div class="base">Sitrus Gin</div>
+          <h3>Earl of Calamansi</h3>
+          <p class="tease">Earl grey, asam boi &amp; calamansi.</p>
+          <div class="recipe"><div class="recipe-inner">
+            <div class="row"><span>Sitrus Gin</span><span>45 ml</span></div>
+            <div class="row"><span>Earl grey tea</span><span>60 ml</span></div>
+            <div class="row"><span>Asam boi</span><span>1 pc</span></div>
+            <div class="row"><span>Calamansi juice</span><span>10 ml</span></div>
+            <div class="row"><span>Syrup</span><span>10 ml</span></div>
+            <div class="row"><span>Soda</span><span>30 ml</span></div>
+            <p class="method">Steep earl grey (1:50) for 3 minutes. Shake asam boi, syrup, calamansi, tea and gin with ice. Strain over cubed ice, top with soda, garnish with mint.</p>
+          </div></div>
+          <span class="ct-toggle">Recipe <span class="pm">+</span></span>
+        </div>
+      </article>
+
+      <article class="ct reveal d1">
+        <div class="ct-img"><span class="num">05</span><img src="https://raksasa.my/wp-content/uploads/2025/05/Raksasa-Gula-Melaka-Rum-Cocktail.jpg" alt=""></div>
+        <div class="ct-body">
+          <div class="base">Gula Melaka Rum</div>
+          <h3>Tropic Colada</h3>
+          <p class="tease">Mango, coconut cream &amp; lime.</p>
+          <div class="recipe"><div class="recipe-inner">
+            <div class="row"><span>Gula Melaka Rum</span><span>45 ml</span></div>
+            <div class="row"><span>Mango juice</span><span>60 ml</span></div>
+            <div class="row"><span>Syrup</span><span>10 ml</span></div>
+            <div class="row"><span>Lime juice</span><span>15 ml</span></div>
+            <div class="row"><span>Coconut cream</span><span>30 ml</span></div>
+            <p class="method">Shake all ingredients hard with ice. Strain into a chilled glass and garnish with coconut flakes.</p>
+          </div></div>
+          <span class="ct-toggle">Recipe <span class="pm">+</span></span>
+        </div>
+      </article>
+
+      <article class="ct reveal d2">
+        <div class="ct-img"><span class="num">06</span><img src="https://raksasa.my/wp-content/uploads/2025/05/Raksasa-Miju-Cocktail.jpg" alt=""></div>
+        <div class="ct-body">
+          <div class="base">Miju</div>
+          <h3>Jackfruit Highball</h3>
+          <p class="tease">Jackfruit, lemon &amp; a splash of soda.</p>
+          <div class="recipe"><div class="recipe-inner">
+            <div class="row"><span>Miju</span><span>60 ml</span></div>
+            <div class="row"><span>Jackfruit puree</span><span>10 ml</span></div>
+            <div class="row"><span>Jackfruit juice</span><span>40 ml</span></div>
+            <div class="row"><span>Lemon juice</span><span>2 wedges</span></div>
+            <div class="row"><span>Soda</span><span>10 ml</span></div>
+            <p class="method">Shake lemon, jackfruit puree, juice and Miju with ice. Strain over cubed ice, top with soda, stir and garnish with a rosemary wedge.</p>
+          </div></div>
+          <span class="ct-toggle">Recipe <span class="pm">+</span></span>
+        </div>
+      </article>
+
+      <article class="ct reveal">
+        <div class="ct-img"><span class="num">07</span><img src="https://raksasa.my/wp-content/uploads/2025/05/Raksasa-Ginger-Wine.jpg" alt=""></div>
+        <div class="ct-body">
+          <div class="base">Ginger Wine</div>
+          <h3>Ginger Smash</h3>
+          <p class="tease">Mint, honey &amp; lime over crushed ice.</p>
+          <div class="recipe"><div class="recipe-inner">
+            <div class="row"><span>Ginger Wine</span><span>60 ml</span></div>
+            <div class="row"><span>Lime juice</span><span>&frac12; pc</span></div>
+            <div class="row"><span>Mint leaves</span><span>a few</span></div>
+            <div class="row"><span>Honey syrup</span><span>10 ml</span></div>
+            <div class="row"><span>Soda</span><span>45 ml</span></div>
+            <p class="method">Muddle and shake lime, mint, honey syrup and Ginger Wine with ice. Strain over crushed ice, top with soda, stir and garnish with a lime wedge.</p>
+          </div></div>
+          <span class="ct-toggle">Recipe <span class="pm">+</span></span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ RITUALS ============ -->
+<section class="rituals" id="rituals">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:0; text-align:left; max-width:760px">
+      <p class="eyebrow reveal">New Ways to Enjoy</p>
+      <h2 class="display h-md reveal d1" style="margin-top:22px">Simple rituals, perfected</h2>
+      <p class="reveal d2">A handful of effortless serves — the way we like to drink Raksasa at home.</p>
+    </div>
+    <div class="rituals-grid">
+      <div class="ritual reveal"><span class="rn">01</span><div><h4>Miju</h4><p>Soda <span class="ratio">1 : 1</span> with an asam boi.</p></div></div>
+      <div class="ritual reveal d1"><span class="rn">02</span><div><h4>Original</h4><p>Sonic — soda + tonic <span class="ratio">1 : 0.5 : 0.5</span> &amp; a slice of lemon.</p></div></div>
+      <div class="ritual reveal"><span class="rn">03</span><div><h4>Hibiscus</h4><p>Preferably sour apple juice <span class="ratio">1 : 0.5</span>.</p></div></div>
+      <div class="ritual reveal d1"><span class="rn">04</span><div><h4>Nutmeg</h4><p>Sonic — soda + tonic <span class="ratio">1 : 0.5 : 0.5</span> &amp; a tiny pinch of salt.</p></div></div>
+      <div class="ritual reveal"><span class="rn">05</span><div><h4>Sitrus</h4><p>Over ice — sipping very nicely.</p></div></div>
+      <div class="ritual reveal d1"><span class="rn">06</span><div><h4>Ginger Wine</h4><p>Sip neat, bursting with flavour — or warm black tea <span class="ratio">1 : 1</span>.</p></div></div>
+      <div class="ritual reveal"><span class="rn">07</span><div><h4>Gula Melaka</h4><p>Soda <span class="ratio">1 : 1</span> &amp; a pinch of salt.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta">
+  <div class="wrap">
+    <p class="glyph-lg">RAKSASA</p>
+    <p class="eyebrow center reveal">The Story Continues</p>
+    <h2 class="display h-lg reveal d1">The tale of Raksasa continues to unfold</h2>
+    <a class="btn light lg reveal d2" href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener">Buy on Lazada <span class="arr">&#8599;</span></a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <p class="foot-logo">RAKSASA</p>
+        <p class="foot-tag">Crafted spirits, born of Malaysian myth and a century-old distillery. Not every legend is a myth — some exist in a bottle.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Explore</h5>
+          <a href="#legend">The Legend</a>
+          <a href="#heritage">Heritage</a>
+          <a href="#spirits">The Spirits</a>
+          <a href="#cocktails">Signature Serves</a>
+          <a href="#rituals">Rituals</a>
+        </div>
+        <div class="foot-col">
+          <h5>Purchase</h5>
+          <a href="https://www.lazada.com.my/shop/monster-and-beer" target="_blank" rel="noopener">Shop on Lazada &#8599;</a>
+          <p>Cave &amp; Cellar Sdn Bhd</p>
+          <p>Seremban, Malaysia</p>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Cave &amp; Cellar Sdn Bhd. All Rights Reserved. 199601040642 (0412995-D)</span>
+      <span>Please enjoy responsibly · 21+</span>
+    </div>
+  </div>
+</footer>
+
+<script src="raksasa.js"></script>
+</body>
+</html>
